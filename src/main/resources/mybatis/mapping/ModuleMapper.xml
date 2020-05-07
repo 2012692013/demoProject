@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qyh.demo.mapper.ModuleMapper" >
+  <resultMap id="BaseResultMap" type="com.qyh.demo.entity.Module" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="pid" property="pid" jdbcType="VARCHAR" />
+    <result column="icon" property="icon" jdbcType="VARCHAR" />
+    <result column="module_name" property="moduleName" jdbcType="VARCHAR" />
+    <result column="request_url" property="requestUrl" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="create_man" property="createMan" jdbcType="VARCHAR" />
+    <result column="update_man" property="updateMan" jdbcType="VARCHAR" />
+    <result column="version" property="version" jdbcType="BIGINT" />
+  </resultMap>
+
+  <resultMap  id="resultModuleVo" extends="BaseResultMap" type="com.qyh.demo.vo.ModuleVo">
+    <collection property="sonModuleList" column="{pid=id,moduleIds=moduleIds}" select="findSonModuleByPid" />
+  </resultMap>
+
+  <update id="updateModuleNumber">
+  		update module set number = replace(number,'${oldNumber}-','${newNumber}-') where pid = #{pid}
+  </update>
+
+  <!--    生成条件 -->
+  <sql id="whereSql">
+    <if test="whereList != null">
+      <foreach collection="whereList" item="item" open=" and " separator=" and ">
+        ${item}
+      </foreach>
+    </if>
+    <if test="groupBy != null and groupBy != ''">
+      group by ${groupBy}
+    </if>
+    <if test="orderBy != null and orderBy != ''">
+      order by ${orderBy}
+    </if>
+    <if test="limit != null and limit != ''">
+      limit ${limit}
+    </if>
+  </sql>
+
+  <select id="findModuleListByLimit" resultMap="resultModuleVo">
+    select *,#{moduleIds} as moduleIds from module where 1=1 <include refid="whereSql" />
+  </select>
+
+  <select id="findSonModuleByPid" resultMap="resultModuleVo">
+     select *,'' as moduleIds from module where pid = #{pid} and FIND_IN_SET(id,#{moduleIds}) order by number asc
+  <!-- select *,'' as moduleIds from module where pid = #{pid}  order by grade asc,number asc -->
+ </select>
+
+ <!--  统计模块名称 -->
+  <select id="countModuleNames" resultType="string">
+    SELECT
+    GROUP_CONCAT(m.module_name)  moduleNames
+    FROM
+    module m
+    where 1=1 <include refid="whereSql" />
+  </select>
+  <!-- 查询模块列表 -->
+  <select id="findListByLimitPageWeb" resultType="map">
+    SELECT
+    m.id,m.module_name moduleName,m.request_url requestUrl,(CASE WHEN (pm.number IS NULL OR pm.number='') THEN m.number ELSE CONCAT(pm.number,"-",m.number) END) number,m.description
+    FROM
+    module m
+    LEFT JOIN module pm on pm.id=m.pid
+    where 1=1 <include refid="whereSql" />
+  </select>
+
+  <!-- 查询所有模块id集 -->
+  <select id="findModuleIds" resultType="String">
+    SELECT GROUP_CONCAT(m.id) moduleIds FROM module m
+    where 1=1 <include refid="whereSql" />
+  </select>
+
+  <!-- 查询所有模块id集 -->
+  <select id="findOneByLimitWeb" resultType="map">
+  	 	SELECT
+			m.*,pm.module_name parentModuleName
+		FROM
+			module m LEFT JOIN module pm ON m.pid=pm.id
+			where m.id=#{id}
+  	</select>
+</mapper>

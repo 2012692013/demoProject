@@ -1,0 +1,46 @@
+mybatis通过以下命名自动生成代码：
+
+通过dos进入pom.xml文件目录下，执行以下命令：
+mvn mybatis-generator:generate
+
+
+pom.xml一定要有以下配置：
+<!-- 自动生成代码需要的配置：start -->
+	<dependencyManagement>
+		<dependencies>
+	        <dependency>
+	            <groupId>org.springframework</groupId>
+	            <artifactId>spring-framework-bom</artifactId>
+	            <version>${spring.version}</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <configurationFile>${basedir}/src/main/resources/generator/generator.xml</configurationFile>
+                    <overwrite>true</overwrite>
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper</artifactId>
+                        <version>${mapper.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+   <!-- 自动生成代码需要的配置：end -->

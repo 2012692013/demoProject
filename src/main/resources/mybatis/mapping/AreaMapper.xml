@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qyh.demo.mapper.AreaMapper" >
+    <resultMap id="BaseResultMap" type="com.qyh.demo.entity.Area" >
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="area_id" property="areaId" jdbcType="VARCHAR" />
+        <result column="area_code" property="areaCode" jdbcType="VARCHAR" />
+        <result column="area_name" property="areaName" jdbcType="VARCHAR" />
+        <result column="level" property="level" jdbcType="INTEGER" />
+        <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+        <result column="parent_id" property="parentId" jdbcType="VARCHAR" />
+        <result column="lat" property="lat" jdbcType="VARCHAR" />
+        <result column="lon" property="lon" jdbcType="VARCHAR" />
+    </resultMap>
+
+</mapper>

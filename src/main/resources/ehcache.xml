@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="WEB-INF/classes/ehcache.xsd"
+         updateCheck="false">
+
+
+    <diskStore path="java.io.tmpdir"/>
+    <!--
+    Mandatory Default Cache configuration. These settings will be applied to caches
+    created programmtically using CacheManager.add(String cacheName)
+    EhCache 配置
+    -->
+    <defaultCache
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            diskSpoolBufferSizeMB="100"
+            maxEntriesLocalDisk="10000000"
+            diskExpiryThreadIntervalSeconds="240"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+      </defaultCache>
+ <!-- 
+        自定义cache。
+        name:自定义名称， 必须唯一。
+        maxEntriesLocalHeap：
+            Sets the maximum number of objects that will be created in memory.  
+            0 = no limit.
+        maxBytesLocalHeap:
+            Defines how many bytes the cache may use from the VM's heap，
+            <number>k|K|m|M|g|G。
+        eternal:
+            Sets whether elements are eternal. 
+            If eternal,  timeouts are ignored and the element is never expired.
+        overflowToDisk:如果内存中数据超过内存限制，是否要缓存到磁盘上。 
+        diskPersistent：  是否在磁盘上持久化。指重启jvm后，数据是否有效。默认为false。 
+        timeToIdleSeconds： 对象空闲时间，指对象在多长时间没有被访问就会失效。只对eternal为false的有效。  默认值0，表示一直可以访问。
+        timeToLiveSeconds：  对象存活时间，指对象从创建到失效所需要的时间。只对eternal为false的有效。 默认值0，表示一直可以访问。    
+        diskExpiryThreadIntervalSeconds： 对象检测线程运行时间间隔。标识对象状态的线程多长时间运行一次。
+        diskSpoolBufferSizeMB： DiskStore使用的磁盘大小，默认值30MB。每个cache使用各自的DiskStore。
+        memoryStoreEvictionPolicy： 如果内存中数据超过内存限制，向磁盘缓存时的策略。默认值LRU，可选FIFO、LFU。 
+         说明：overflowToDisk和diskPersistent、DiskStoreBootstrapCacheLoaderFactory是
+            在2.5及之前版本拥有的参数；
+     2.6及之后的版本建议使用<persistence>或<terracotta>来代替，参阅ehcache.xsd。
+     <persistence strategy="localTempSwap"/>
+            或<persistence strategy="none"/>
+     -->
+	
+	<cache name="msgCodeCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           diskSpoolBufferSizeMB="50"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="300"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+    
+    <cache name="timestampCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="10000000"
+           eternal="false"
+           diskSpoolBufferSizeMB="50"
+           timeToIdleSeconds="5"
+           timeToLiveSeconds="5"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+    
+    <cache	name="sysCodeCache"
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            diskSpoolBufferSizeMB="100"
+            maxEntriesLocalDisk="10000000"
+            diskExpiryThreadIntervalSeconds="240"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+      </cache>
+      
+     <cache	name="dictCache"
+           maxEntriesLocalHeap="10000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="0"
+           diskSpoolBufferSizeMB="100"
+           maxEntriesLocalDisk="10000000"
+           diskExpiryThreadIntervalSeconds="240"
+           memoryStoreEvictionPolicy="LRU">
+       <persistence strategy="localTempSwap"/>
+     </cache>
+    
+    <cache	name="tokenCache"
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            diskSpoolBufferSizeMB="100"
+            maxEntriesLocalDisk="10000000"
+            diskExpiryThreadIntervalSeconds="240"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+      </cache>
+      
+    <cache	name="sysTokenCache"
+         maxEntriesLocalHeap="10000"
+         eternal="false"
+         timeToIdleSeconds="0"
+         timeToLiveSeconds="0"
+         diskSpoolBufferSizeMB="100"
+         maxEntriesLocalDisk="10000000"
+         diskExpiryThreadIntervalSeconds="240"
+         memoryStoreEvictionPolicy="LRU">
+     <persistence strategy="localTempSwap"/>
+   </cache>
+   
+    <cache	name="sysUserIdCache"
+         maxEntriesLocalHeap="10000"
+         eternal="false"
+         timeToIdleSeconds="0"
+         timeToLiveSeconds="0"
+         diskSpoolBufferSizeMB="100"
+         maxEntriesLocalDisk="10000000"
+         diskExpiryThreadIntervalSeconds="240"
+         memoryStoreEvictionPolicy="LRU">
+     <persistence strategy="localTempSwap"/>
+   </cache>
+    
+</ehcache>

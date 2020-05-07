@@ -1,0 +1,115 @@
+# server
+server:
+    port: 9000
+    servlet:
+        context-path: /demo
+    tomcat:
+        maxHttpHeaderSize: 10240000
+        maxHttpPostSize: 10240000
+# spring
+spring:
+    data:
+        solr:
+            host: http://127.0.0.1:8080/solr
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+    redis:
+        host: 127.0.0.1
+        password:
+        port: 6379
+        jedis:
+            max-idle: 100
+            min-idle: 1
+            max-active: 1000
+            max-wait: -1
+    datasource:
+        url: jdbc:mysql://119.23.227.40:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+        username: root
+        password: qyhkj_database5.6
+        driverClassName: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+        filters: stat
+        # 初始化大小，最小，最大
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        # 打开PSCache，并且指定每个连接上PSCache的大小
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+
+        tomcat:
+            max-active: 20
+            test-while-idle: true
+            validation-query: select 1
+            default-auto-commit: false
+            min-idle: 15
+            initial-size: 15
+
+            #    cache:
+            #        type: ehcache
+            #        ehcache:
+            #            config: classpath:ehcache.xml
+
+            #jpa:
+            #    database: MYSQL
+            #    show-sql: true
+            #    database-platform: org.hibernate.dialect.MySQL5Dialect
+            #    generate-ddl: true
+            #    hibernate:
+            #        ddl-auto: none
+            #        namimg-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+
+    # HTTP ENCODING
+    http:
+        multipart:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+        servlet:
+            multipart:
+                max-file-size: 200MB
+                max-request-size: 200MB
+
+
+
+# mybatis
+mybatis:
+    #配置使用xml写sql
+    config-locations: classpath:mybatis/mybatis-config.xml
+    mapper-locations: classpath:mybatis/mapping/*.xml
+    # 配置类型别名
+    typeAliasesPackage: com.qyh.demo.entity
+
+    #使用注解写sql时 转换驼峰命名
+    configuration:
+        mapUnderscoreToCamelCase: true
+        callSettersOnNulls: true
+
+#mapper:
+#    mappers:
+#        - com.qyh.cityAlliance.mapper
+#    not-empty: false
+#    identity: MYSQL
+
+# LOGGING
+logging:
+    level:
+        com.qyh.demo.mapper: INFO
+    path: ../demo_log/demo_log.log
+    #config: classpath:logback.xml
+swagger:
+    enable: false #是否开启swagger
+    param-valid:
+        enable: true #是否开启上下文参数校验

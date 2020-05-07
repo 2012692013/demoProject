@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <properties resource="generator.properties"/>
+
+  <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+	<!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+	<property name="javaFileEncoding" value="UTF-8" />
+	
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+    
+    <plugin type="${generator.mapperPlugin}">
+      <property name="mappers" value="${generator.mapper}"/>
+    </plugin>
+
+    <!--生成的实体类重写toString方法-->
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+    <!-- 生成的实体类重写hashCode和equals方法 -->
+    <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+
+  <!-- 自动为entity生成swagger2文档-->
+  <plugin type="mybatis.generator.plugins.GeneratorSwagger2Doc">
+      <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel" />
+      <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty" />
+  </plugin>
+    
+    
+
+    <jdbcConnection driverClass="${jdbc.driverClass}"
+                    connectionURL="${jdbc.url}"
+                    userId="${jdbc.user}"
+                    password="${jdbc.password}">
+        <property name="nullCatalogMeansCurrent" value="true"/>
+    </jdbcConnection>
+
+	<javaTypeResolver>
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和   
+           NUMERIC 类型解析为java.math.BigDecimal -->  
+		<property name="forceBigDecimals" value="true" />
+	</javaTypeResolver>
+
+    <javaModelGenerator targetPackage="${generator.entityPackage}" targetProject="${generator.targetProject}">
+    	<!-- 设置一个根对象，
+		            如果设置了这个根对象，那么生成的keyClass或者recordClass会继承这个类；在Table的rootClass属性中可以覆盖该选项
+		            注意：如果在key class或者record class中有root class相同的属性，MBG就不会重新生成这些属性了，包括：
+		                1，属性名相同，类型相同，有相同的getter/setter方法；
+         -->
+    	<property name="rootClass" value="com.qyh.demo.base.BaseEntity"/>
+    	
+    	<!--  for MyBatis3/MyBatis3Simple
+        		    自动为每一个生成的类创建一个构造方法，构造方法包含了所有的field；而不是使用setter；
+         -->
+        <property name="constructorBased" value="false"/>
+        
+        <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+        <property name="enableSubPackages" value="true"/>
+        
+        <!-- for MyBatis3 / MyBatis3Simple
+		            是否创建一个不可变的类，如果为true，
+		            那么MBG会创建一个没有setter方法的类，取而代之的是类似constructorBased的类
+         -->
+        <property name="immutable" value="false"/>
+        
+        <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
+        <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    
+    
+
+    <sqlMapGenerator targetPackage="${generator.mappingPackage}"  targetProject="${generator.targetProject_xml}"/>
+
+    <javaClientGenerator targetPackage="${generator.daoPackage}" targetProject="${generator.targetProject}" type="XMLMAPPER" />
+
+    <table tableName="%" >
+      <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>
+  </context>
+</generatorConfiguration>
