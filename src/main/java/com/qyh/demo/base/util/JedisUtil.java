@@ -2,14 +2,13 @@ package com.qyh.demo.base.util;
 
 import com.qyh.demo.constants.ContextConstants;
 import org.springframework.context.annotation.Configuration;
-import redis.clients.jedis.BinaryClient;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 
 /**
  * Created with IDEA
