@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 支付宝
  * 
- * @author asus
+ * @author qiuyuehao
  *
  */
 @Slf4j
@@ -92,7 +92,7 @@ public class Alipay {
 	/**
 	 * app支付
 	 *
-	 * @author lcj 2017年10月27日下午7:18:29
+	 * @author qiuyuehao 2017年10月27日下午7:18:29
 	 * @param number
 	 *            订单号
 	 * @param describe
@@ -150,7 +150,7 @@ public class Alipay {
 	 * @throws AlipayApiException
 	 * @describe 详情参考地址 https://docs.open.alipay.com/api_1/alipay.trade.refund
 	 * 2018年11月7日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static AlipayTradeRefundResponse tradeRefundToResponse(AlipayTradeRefundModel model) throws AlipayApiException{
 		AlipayTradeRefundRequest request = new AlipayTradeRefundRequest();
@@ -163,7 +163,7 @@ public class Alipay {
 	 * @param code
 	 * @return
 	 * 2018年9月10日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static AlipaySystemOauthTokenResponse token(String code) {
 		AlipaySystemOauthTokenRequest request = new AlipaySystemOauthTokenRequest();// 创建API对应的request类
@@ -188,7 +188,7 @@ public class Alipay {
 	 * @param accessToken
 	 * @return
 	 * 2018年9月10日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static AlipayUserInfoShareResponse share(String accessToken) {
 		AlipayClient alipayClient = null;
@@ -223,7 +223,7 @@ public class Alipay {
 	 * @param returnUrl
 	 *            前端回调地址
 	 * @date     2019年01月26日 15:10:50
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static String wapPay(String number, String describe, String price, String notify_url,String returnUrl) {
 		// 实例化客户端
@@ -276,7 +276,7 @@ public class Alipay {
 	 * @param returnUrl
 	 *            前端回调地址
 	 * @date     2019年01月26日 15:25:20
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static String pagePay(String number, String describe, String price, String notify_url,String returnUrl) {
 		// 实例化客户端

@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  * wangeditor轻量级富文本
- * @author hx 2018年3月23日上午10:22:07
+ * @author qiuyuehao 2018年3月23日上午10:22:07
  *
  */
 @RestController

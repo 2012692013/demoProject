@@ -12,7 +12,7 @@ public interface RoleMapper extends Mapper<Role> {
      * @param whereMap
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     List<Map<String, Object>> findListByLimitPageWeb(Map<String, Object> whereMap);
 
@@ -21,7 +21,7 @@ public interface RoleMapper extends Mapper<Role> {
      * @param whereMap
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     List<Map<String, Object>> findAllRoleWeb(Map<String, Object> whereMap);
 }

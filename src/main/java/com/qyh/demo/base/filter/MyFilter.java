@@ -11,7 +11,7 @@ import java.io.IOException;
 
 /**
  * 过滤器
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 @WebFilter

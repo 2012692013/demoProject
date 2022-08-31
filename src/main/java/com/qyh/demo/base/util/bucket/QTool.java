@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 因KIT工具箱内容过多,为保证KIT简洁单一,本人常用的工具放置于此类
- * @author q_y_h
+ * @author qiuyuehao
  * @date 2020/3/19 15:38
  * create by 2012692013@qq.com
  */

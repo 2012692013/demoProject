@@ -693,7 +693,7 @@ public class Kit {
 	 *(特殊字符替换)
 	 * @param
 	 * @return String    返回类型
-	 * @author xsw
+	 * @author qiuyuehao
 	 * @2016-12-4下午03:10:03
 	 */
 	public static String htmlReplace(String str){
@@ -760,7 +760,7 @@ public class Kit {
 
 	/**
 	 * 获取请求参数字符串
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月7日
 	 * @param map
 	 * @return
@@ -865,7 +865,7 @@ public class Kit {
 	 * @return 增加天数后的日期
 	 * @throws Exception
 	 * 2018年4月19日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static Date plusDay(int num,Date newDate) throws Exception{
 		Calendar ca = Calendar.getInstance();
@@ -882,7 +882,7 @@ public class Kit {
 	 * @return
 	 * @throws Exception
 	 * 2018年8月20日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static Date subtractDay(int num,Date newDate) throws Exception{
 		Calendar ca = Calendar.getInstance();
@@ -896,7 +896,7 @@ public class Kit {
 	 *
 	 * @param str
 	 * @return "'%"+str+"%'"
-	 * @author shugl
+	 * @author qiuyuehao
 	 * @date 2018年8月17日
 	 */
 	public static String getLikeStr(String str){
@@ -912,7 +912,7 @@ public class Kit {
 	 * @param    text 分词字符串
 	 * @return   返回分词后 数据集合
 	 * @date     2019年02月20日 11:23:10
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static List<String> getAnalyzerData(String text) {
 		List<String> resultList =  new ArrayList<>();
@@ -936,7 +936,7 @@ public class Kit {
 	 * @return  返回的就是UTC时间
 	 * @throws Exception
 	 * 2018年10月30日
-	 * @author cloud fly
+	 * @author qiuyuehao
 	 */
 	public static String getUTCTimeStr() throws Exception {
 		Calendar cal = Calendar.getInstance();

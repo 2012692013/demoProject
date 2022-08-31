@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 登录/退出
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 @RestController
@@ -40,7 +40,7 @@ public class LoginController {
 	 * @param request
 	 * @return
 	 * 2018年5月23日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	@RequestMapping(value="/sys/getLoginPrivilege",method=RequestMethod.GET,headers="api-version=1")
 	public ResponseResult getLoginPrivilege(HttpServletRequest request){

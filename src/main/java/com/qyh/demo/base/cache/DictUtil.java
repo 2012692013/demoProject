@@ -15,7 +15,7 @@ public class DictUtil {
 
 	/**
 	 * 获取字典详情值
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月15日
 	 * @param dictValue
 	 * @param dataName
@@ -37,7 +37,7 @@ public class DictUtil {
 	
 	/**
 	 * 更新字典
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月15日
 	 * @param option update更新名称      delete删除字典
 	 * @param dictValue
@@ -76,7 +76,7 @@ public class DictUtil {
 	
 	/**
 	 * 更新字典详情
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月15日
 	 * @param option save添加		delete删除
 	 * @param dictValue

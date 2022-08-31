@@ -2,7 +2,7 @@ package com.qyh.demo.base.exception;
 
 /**
  * 短信发送异常
- * @author yh
+ * @author qiuyuehao
  *
  */
 public class SMSException extends RuntimeException{

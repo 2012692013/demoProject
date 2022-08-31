@@ -14,7 +14,7 @@ import java.util.Random;
 /**
  * @title VerificationCodeServiceImp.java
  * @package com.hmkj.framework.service.imp
- * @author xuxp 
+ * @author qiuyuehao
  * @E-mail:
  * @version 2012-5-4 下午05:34:39
  * @version V1.0

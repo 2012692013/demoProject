@@ -8,7 +8,7 @@ import com.qyh.demo.base.interceptor.LoginInterceptor;
 
 /**
  * 注册拦截器
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 

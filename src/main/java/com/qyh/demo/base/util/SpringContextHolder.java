@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * 以静态变量保存Spring ApplicationContext, 可在任何代码任何地方任何时候取出ApplicaitonContext.
  * 
- * @author Zaric
+ * @author qiuyuehao
  * @date 2013-5-29 下午1:25:40
  */
 @Component

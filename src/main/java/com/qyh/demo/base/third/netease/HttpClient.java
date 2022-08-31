@@ -21,7 +21,7 @@ import java.util.*;
 /** 网易云 即时通讯 常用方法工具类
 * @Description:
 * @CreateDate:     2019年02月19日 17:00:38
-* @Author:         cloud fly
+* @author qiuyuehao
 */
 @Slf4j
 public class HttpClient {
@@ -36,7 +36,7 @@ public class HttpClient {
 	 * @throws Exception
 	 * @param paramMap
 	 * 2018年11月1日
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Map<String,String> registerNetEaseUser(Map<String,String> paramMap) throws Exception {
 		Map<String,String> resultMap = new HashMap<String,String>();
@@ -74,7 +74,7 @@ public class HttpClient {
 	 * uinfos：用户信息  json字符数组[{"accid":"test3","name":"test3","gender":0}]
 	 * @throws Exception
 	 * 2018年11月1日
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Map<String,String> getNetEaseUser(String userIds) throws Exception {
 		String url = "https://api.netease.im/nimserver/user/getUinfos.action";
@@ -125,7 +125,7 @@ public class HttpClient {
 	 * @return state：0失败，1成功，msg：描述信息
 	 * @throws Exception
 	 * 2018年11月1日
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Map<String,String> updateNetEaseUser(Map<String,String> paramMap) throws Exception {
 		Map<String,String> resultMap = new HashMap<String,String>();
@@ -165,7 +165,7 @@ public class HttpClient {
 	 * @param paramMap 参数封装
 	 * @return state：0失败，1成功，msg：描述信息
 	 * @date     2019年02月19日 16:59:54
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 * @throws Exception
 	 */
 	public static Map<String,String> updateNetEaseUserInfo(Map<String,String> paramMap) throws Exception {
@@ -215,7 +215,7 @@ public class HttpClient {
 	 * @param paramMap		参数map
 	 * @param headerMap		请求头map
 	 * @date     2019年02月19日 16:59:54
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static String postNetEase(String url, Map<String,String> paramMap,Map<String,String> headerMap)throws Exception {
 		@SuppressWarnings("resource")

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2018/10/15
  * Time:下午5:32
  */

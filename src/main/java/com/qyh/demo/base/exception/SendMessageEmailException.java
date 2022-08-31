@@ -2,7 +2,7 @@ package com.qyh.demo.base.exception;
 
 /**
  * 邮件发送异常
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class SendMessageEmailException extends RuntimeException{

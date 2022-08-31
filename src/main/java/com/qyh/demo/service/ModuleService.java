@@ -21,7 +21,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param pageSize
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	ResponseResult findListByLimitPageWeb(HttpServletRequest request,
                                           String moduleName, String topModId, Integer pageIndex,
@@ -32,7 +32,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param request
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	ResponseResult findTopModuleWeb(HttpServletRequest request)throws Exception;
 
@@ -42,7 +42,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param id
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	ResponseResult findOneByLimitWeb(HttpServletRequest request, String id);
 
@@ -52,7 +52,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param entity
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	ResponseResult changeEntityWeb(HttpServletRequest request, Module entity) throws Exception ;
 
@@ -62,7 +62,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @return
 	 * @throws Exception
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	List<ModuleVo> findModuleListByLimit(Map<String, Object> whereMap);
 
@@ -72,7 +72,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @return
 	 * @throws Exception
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public int updateModule(Module entity) throws Exception;
 
@@ -81,7 +81,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param whereMap
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	String countModuleNames(Map<String, Object> whereMap);
 
@@ -90,7 +90,7 @@ public interface ModuleService extends BaseService<Module> {
 	 * @param whereMap2
 	 * @return
 	 * 2018年7月11日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	String findModuleIds(Map<String, Object> whereMap2);
 

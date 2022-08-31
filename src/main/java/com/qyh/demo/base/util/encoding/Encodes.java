@@ -30,7 +30,7 @@ import sun.misc.BASE64Encoder;
  * 2.自制的base62 编码
  * 3.Commons-Lang的xml/html escape
  * 4.JDK提供的URLEncoder
- * @author calvin
+ * @author qiuyuehao
  * @version 2013-01-15
  */
 @SuppressWarnings("restriction")

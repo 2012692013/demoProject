@@ -14,7 +14,7 @@ import org.apache.ibatis.plugin.Signature;
 
 /**
  * 乐观锁并发拦截处理
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 

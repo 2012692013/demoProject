@@ -81,7 +81,7 @@ public class CodeController {
      * @param entity
      * @param request
      * @return
-     * @author shugl
+     * @author qiuyuehao
      * @date 2018年6月4日
      */
     @RequestMapping(value = "sys/saveEntity", method = RequestMethod.POST)

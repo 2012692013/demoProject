@@ -1,7 +1,7 @@
 package com.qyh.demo.base.third.pay.alipay;
 /**
  * 支付宝退款对象
- * @author lcj 2017年10月27日下午8:59:22
+ * @author qiuyuehao 2017年10月27日下午8:59:22
  *
  */
 public class AlipayRefund {

@@ -2,7 +2,7 @@ package com.qyh.demo.base.exception;
 
 /**
  * 前端参数值 传递错误
- * @author yh
+ * @author qiuyuehao
  *
  */
 public class ParamException extends RuntimeException{

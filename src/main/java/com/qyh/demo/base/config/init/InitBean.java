@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * 初始化全局bean
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 

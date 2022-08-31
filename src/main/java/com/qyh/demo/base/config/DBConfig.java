@@ -29,7 +29,7 @@ import com.github.pagehelper.PageHelper;
 
 /**
  * 连接池配置
- * @author hx
+ * @author qiuyuehao
  * 2018年6月8日
  */
 @Configuration

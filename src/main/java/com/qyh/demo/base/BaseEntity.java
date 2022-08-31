@@ -39,7 +39,7 @@ public class BaseEntity {
 	
 	/**
 	 * 保存前
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月12日
 	 * @param request
 	 */
@@ -69,7 +69,7 @@ public class BaseEntity {
 	
 	/**
 	 * 修改前
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月12日
 	 * @param request
 	 */

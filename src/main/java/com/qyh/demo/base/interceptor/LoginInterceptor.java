@@ -20,7 +20,7 @@ import java.util.Map;
 
 /**
  * 拦截器
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 @Slf4j
@@ -162,7 +162,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 	/**
 	 * 接口加密验证
 	 * 加密规则:MD5(MD5(timestamp+"qyh"))
-	 * @author      hx
+	 * @author qiuyuehao
 	 * @return
 	 * @exception
 	 * @date        2019/9/23 5:00 PM

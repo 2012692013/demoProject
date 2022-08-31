@@ -2,7 +2,7 @@ package com.qyh.demo.base.exception;
 
 /**
  * 系统参数异常
- * @author yh
+ * @author qiuyuehao
  *
  */
 public class RegisterEasemobException extends RuntimeException{

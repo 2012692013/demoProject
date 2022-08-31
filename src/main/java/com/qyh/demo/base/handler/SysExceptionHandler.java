@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  * 异常处理
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 @RestControllerAdvice

@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * 微信
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class Wechat {
@@ -195,7 +195,7 @@ public class Wechat {
 	 * @param money		金额
 	 * @param notify_url		后台回调地址
 	 * @date     2019年02月13日 15:30:12
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Object wechatNATIVEPay(String ip, String batchNum, String body, String money, String notify_url) {
 		BigDecimal b1 = new BigDecimal(money);
@@ -244,7 +244,7 @@ public class Wechat {
 	 * @param notify_url		后台回调地址
 	 * @param returnUrl		前端回调地址
 	 * @date     2019年02月13日 14:27:34
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Object wechatH5Pay(String ip, String batchNum, String body, String money, String notify_url,String returnUrl) {
 		BigDecimal b1 = new BigDecimal(money);

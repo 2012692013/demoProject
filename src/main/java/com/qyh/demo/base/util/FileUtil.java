@@ -33,7 +33,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 /**
  * <p style="color:blue"> 用于文件上传 包括图片视频等</p>
  *
- * @author moon
+ * @author qiuyuehao
  *
  */
 @Slf4j
@@ -406,7 +406,7 @@ public class FileUtil {
      * @param color  字体颜色
      * @param formaName 图片后缀
      * @date     2019年02月19日 14:23:28
-     * @author   cloud fly
+     * @author qiuyuehao
      */
     public static void markImageByText(String logoText, String srcImgPath, String newImagePath, Integer degree, Color color, String formaName) {
         InputStream is = null;
@@ -457,7 +457,7 @@ public class FileUtil {
 
     /**
     * 图片压缩
-    * @author      hx
+    * @author qiuyuehao
     * @return
     * @exception
     * @date        2019/12/19 11:11 AM

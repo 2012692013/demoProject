@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 /**
  * 后台发出http请求
- * @author asus
+ * @author qiuyuehao
  *
  */
 public class HttpRequest {

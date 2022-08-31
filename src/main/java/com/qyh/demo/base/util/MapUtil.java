@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * map工具
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class MapUtil {

@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * 微信消息
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class WxMessage {

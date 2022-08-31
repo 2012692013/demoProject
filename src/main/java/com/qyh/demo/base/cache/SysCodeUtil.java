@@ -14,7 +14,7 @@ public class SysCodeUtil {
 	
 	/**
 	 * 通过类型，键获取系统参数
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月15日
 	 * @param type 参数类型
 	 * @param codeKey 参数键
@@ -33,7 +33,7 @@ public class SysCodeUtil {
 	
 	/**
 	 * 更新系统参数
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月15日
 	 * @param option save添加    update更新    delete删除
 	 * @param code 系统参数实体

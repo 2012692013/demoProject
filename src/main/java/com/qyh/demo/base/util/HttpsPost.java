@@ -18,7 +18,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 /**
  * 后台发出https请求
- * @author asus
+ * @author qiuyuehao
  *
  */
 public class HttpsPost {

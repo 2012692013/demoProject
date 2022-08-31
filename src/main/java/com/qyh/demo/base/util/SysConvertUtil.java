@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.Random;
 /**
  * 进制转换工具
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class SysConvertUtil {

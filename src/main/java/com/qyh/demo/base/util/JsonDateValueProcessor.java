@@ -6,7 +6,7 @@ import net.sf.json.processors.JsonValueProcessor;
 
 /**
  * 把时间类型转化成json时需要加入的规则
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class JsonDateValueProcessor implements JsonValueProcessor {  

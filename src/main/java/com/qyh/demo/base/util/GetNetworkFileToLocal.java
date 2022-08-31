@@ -8,7 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;  
 /** 
  * @说明 从网络获取文件到本地 
- * @author 崔素强 
+ * @author qiuyuehao
  * @version 1.0 
  * @since 
  */  

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 关于异常的工具类.
- * @author calvin
+ * @author qiuyuehao
  * @version 2013-01-15
  */
 public class Exceptions {

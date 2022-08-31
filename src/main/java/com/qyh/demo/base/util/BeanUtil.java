@@ -13,7 +13,7 @@ import org.apache.commons.beanutils.BeanUtils;
 
 /**
  * <p style="color:blue">  map和bean互转工具类</p>
- * @author moon
+ * @author qiuyuehao
  *
  */
 public class BeanUtil {

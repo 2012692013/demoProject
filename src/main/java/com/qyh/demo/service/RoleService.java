@@ -16,7 +16,7 @@ public interface RoleService extends BaseService<Role> {
      * @param pageSize
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     ResponseResult findListByLimitPageWeb(HttpServletRequest request, String roleName,
                                           String moduleIds, Integer pageIndex, Integer pageSize);
@@ -26,7 +26,7 @@ public interface RoleService extends BaseService<Role> {
      * 查询所有角色
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     ResponseResult findAllRoleWeb();
 
@@ -36,7 +36,7 @@ public interface RoleService extends BaseService<Role> {
      * @param id
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     ResponseResult findEntityByIdWeb(String id) throws Exception;
 
@@ -47,7 +47,7 @@ public interface RoleService extends BaseService<Role> {
      * @param entity
      * @return
      * 2018年10月15日
-     * @author yh
+     * @author qiuyuehao
      */
     ResponseResult changeEntityWeb(HttpServletRequest request, Role entity);
 	

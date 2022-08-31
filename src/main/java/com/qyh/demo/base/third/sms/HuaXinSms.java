@@ -7,7 +7,7 @@ import net.sf.json.JSONObject;
 
 /**
  * 华信短信
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class HuaXinSms {

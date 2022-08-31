@@ -16,7 +16,7 @@ import java.util.*;
 
 /**
  * 因项目规范以swagger为主 关于swagger上下文的内容都在此获取
- * @author q_y_h
+ * @author qiuyuehao
  * @date 2020/3/19 15:44
  * create by 2012692013@qq.com
  */

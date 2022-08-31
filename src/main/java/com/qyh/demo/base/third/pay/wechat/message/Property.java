@@ -2,7 +2,7 @@ package com.qyh.demo.base.third.pay.wechat.message;
 
 /**
  * 微信模板的属性
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class Property {

@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 /**
 * @Description:    计算  网易云 接口请求令牌
 * @CreateDate:     2019年02月19日 17:54:27
-* @Author:         cloud fly
+* @author qiuyuehao
 */
 public class CheckSumBuilder {
 	
@@ -16,7 +16,7 @@ public class CheckSumBuilder {
 	 * @param curTime 当前UTC时间戳
 	 * @return
 	 * 2018年10月30日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
     public static String getCheckSum(String appSecret, String nonce, String curTime) {
         return encode("sha1", appSecret + nonce + curTime);
@@ -27,7 +27,7 @@ public class CheckSumBuilder {
      * @param requestBody
      * @return
      * 2018年10月30日
-     * @author yh
+     * @author qiuyuehao
      */
     public static String getMD5(String requestBody) {
         return encode("md5", requestBody);

@@ -24,7 +24,7 @@ import java.util.*;
 
 /**
  * 项目启动初始化
- * @author hx
+ * @author qiuyuehao
  * 2018年6月12日
  */
 @Configuration
@@ -68,7 +68,7 @@ public class AppInit implements CommandLineRunner{
 	
 	/**
 	 * 初始化用户
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月14日
 	 */
 	private void initUser(Jedis jedis){
@@ -91,7 +91,7 @@ public class AppInit implements CommandLineRunner{
 
 	/**
 	 * 初始化系统参数
-	 * @author hx
+	 * @author qiuyuehao
 	 * 2018年6月14日
 	 */
 	private void initSysCode(Jedis jedis){

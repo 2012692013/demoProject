@@ -24,7 +24,7 @@ import static com.qyh.demo.vo.ResponseResult.success;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2019/1/17
  * Time:9:27 PM
  */
@@ -40,7 +40,7 @@ public class UserApiController {
      * @param phone
      * @return
      * 2018年8月15日
-     * @author yh
+     * @author qiuyuehao
      */
     @RequestMapping(value="/getCurSysTimestamp",method= RequestMethod.GET,headers="api-version=1")
     public ResponseResult getCurSysTimestamp(String phone){
@@ -59,7 +59,7 @@ public class UserApiController {
      * @param userDto
      * @return
      * 2018年9月26日
-     * @author yh
+     * @author qiuyuehao
      * @throws Exception
      */
     @RequestMapping(value="/getMsgCode",method= RequestMethod.GET,headers="api-version=1")

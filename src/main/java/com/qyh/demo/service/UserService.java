@@ -40,7 +40,7 @@ public interface UserService extends BaseService<SysUser> {
 	 * @param userDto
 	 * @return
 	 * 2018年9月26日
-	 * @author hx
+	 * @author qiuyuehao
 	 */
 	public ResponseResult getMsgCode(SysUserDto userDto);
 

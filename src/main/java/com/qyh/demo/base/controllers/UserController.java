@@ -30,7 +30,7 @@ import static com.qyh.demo.vo.ResponseResult.success;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2019/1/3
  * Time:11:55 AM
  */
@@ -96,7 +96,7 @@ public class UserController {
 
     /**
      * 修改用户冻结状态
-     * @author LLH
+     * @author qiuyuehao
      * @param request
      * @param id
      * @param state

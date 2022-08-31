@@ -29,7 +29,7 @@ import javax.mail.internet.MimeUtility;
 /**
  * @Description:    邮件发送工具类
  * @CreateDate:     2019年02月19日 17:48:55
- * @Author:         cloud fly
+ * @author qiuyuehao
  */
 public class SendMail {
     //http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
@@ -82,7 +82,7 @@ public class SendMail {
     /**
      * 验证账号密码
      * 发送邮件必须的步骤
-     * @author Administrator
+     * @author qiuyuehao
      *
      */
     public class Email_Autherticator extends Authenticator
@@ -267,7 +267,7 @@ public class SendMail {
      * @throws IOException
      * @throws MessagingException
      * 2018年8月6日
-     * @author yh
+     * @author qiuyuehao
      */
     public static void sendMessageEmail(List<String> list,String content)throws IOException, MessagingException{
         Map<String,String> map= new HashMap<String,String>();
@@ -298,7 +298,7 @@ public class SendMail {
      * @throws IOException
      * @throws MessagingException
      * 2018年8月6日
-     * @author yh
+     * @author qiuyuehao
      */
     public static void sendMessageEmailAndAccessory(List<String> list,String content,String path)throws IOException, MessagingException{
         Map<String,String> map= new HashMap<String,String>();
@@ -329,7 +329,7 @@ public class SendMail {
      * @throws IOException
      * @throws MessagingException
      * 2018年8月6日
-     * @author yh
+     * @author qiuyuehao
      */
     public static void sendMessageEmailAndAccessorys(List<String> list,String content,List<String> fileList)throws IOException, MessagingException{
         Map<String,String> map= new HashMap<String,String>();

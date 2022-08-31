@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
 * @Description:    solr常用方法
 * @CreateDate:     2019年02月21日 10:11:35
-* @Author:         cloud fly
+* @author qiuyuehao
 */
 public class HttpClientSolr {
 

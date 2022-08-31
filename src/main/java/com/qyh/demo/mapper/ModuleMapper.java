@@ -13,7 +13,7 @@ public interface ModuleMapper extends Mapper<Module> {
      * @param whereMap
      * @return
      * 2018年7月11日
-     * @author yh
+     * @author qiuyuehao
      */
     List<Map<String, Object>> findListByLimitPageWeb(Map<String, Object> whereMap);
 
@@ -22,7 +22,7 @@ public interface ModuleMapper extends Mapper<Module> {
      * @param whereMap
      * @return
      * 2018年7月11日
-     * @author yh
+     * @author qiuyuehao
      */
     List<ModuleVo> findModuleListByLimit(Map<String, Object> whereMap);
 
@@ -31,7 +31,7 @@ public interface ModuleMapper extends Mapper<Module> {
      * @param id
      * @return
      * 2018年7月11日
-     * @author yh
+     * @author qiuyuehao
      */
     Map<String, Object> findOneByLimitWeb(String id);
 
@@ -40,7 +40,7 @@ public interface ModuleMapper extends Mapper<Module> {
      * @param whereMap
      * @return
      * 2018年7月11日
-     * @author yh
+     * @author qiuyuehao
      */
     String countModuleNames(Map<String, Object> whereMap);
 
@@ -49,7 +49,7 @@ public interface ModuleMapper extends Mapper<Module> {
      * @param whereMap2
      * @return
      * 2018年7月11日
-     * @author yh
+     * @author qiuyuehao
      */
     String findModuleIds(Map<String, Object> whereMap2);
 }

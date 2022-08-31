@@ -26,7 +26,7 @@ public class AlipayUtil {
 	 * @param payType	支付类型(app:app支付，wap：网站支付2.0，page：PC场景下单并支付)
 	 * @param returnUrl	前端回调地址
 	 * @date     2019年02月19日 16:05:14
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static String alipayPay(String number,String describe,String price,String notify_url,String payType,String returnUrl) throws Exception{
 		//price = "0.01";//测试默认值 TODO
@@ -45,7 +45,7 @@ public class AlipayUtil {
 	}
 	/**
 	 * 支付宝退款
-	 * @author lcj 2017年10月27日下午9:10:35
+	 * @author qiuyuehao 2017年10月27日下午9:10:35
 	 * @param paramList	退款参数
 	 * @return	AlipayTradeRefundResponse对象参数说明：https://docs.open.alipay.com/api_1/alipay.trade.refund
 	 * @throws Exception
@@ -65,7 +65,7 @@ public class AlipayUtil {
 	 * @throws AlipayApiException
 	 * @describe 详情参考地址 https://docs.open.alipay.com/api_1/alipay.trade.refund
 	 * 2018年11月7日
-	 * @author yh
+	 * @author qiuyuehao
 	 */
 	public static AlipayTradeRefundResponse alipayRefund(AlipayTradeRefundModel model) throws Exception{
 		return Alipay.tradeRefundToResponse(model);
@@ -132,7 +132,7 @@ public class AlipayUtil {
 	 * 获取授权信息
 	 * @return
 	 * @throws Exception
-	 * @author shugl
+	 * @author qiuyuehao
 	 * @date 2018年7月25日
 	 */
 	public static String getAuthInfo(String type) throws Exception{

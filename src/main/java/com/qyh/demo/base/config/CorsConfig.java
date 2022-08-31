@@ -8,7 +8,7 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2019/1/4
  * Time:9:54 AM
  */

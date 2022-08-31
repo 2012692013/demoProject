@@ -21,7 +21,7 @@ import java.util.*;
 
 /**
  * 辅助工具
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class AssistUtil {

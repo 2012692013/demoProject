@@ -5,7 +5,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author q_y_h
+ * @author qiuyuehao
  * @date 2020/5/13 15:17
  * create by 2012692013@qq.com
  */

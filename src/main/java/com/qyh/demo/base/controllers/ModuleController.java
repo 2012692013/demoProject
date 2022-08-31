@@ -178,7 +178,7 @@ public class ModuleController {
 	 * 获取登录人菜单
 	 * @param request
 	 * @return
-	 * @author shugl
+	 * @author qiuyuehao
 	 * @date 2018年5月25日
 	 */
 	@RequestMapping(value="/sys/getLoginModules",method=RequestMethod.GET)

@@ -317,7 +317,7 @@ public class WechatUtil {
 	 * @param returnUrl		前端回调地址
 	 * @param openId		jsapi支付必传
 	 * @date     2019年02月13日 10:13:26
-	 * @author   cloud fly
+	 * @author qiuyuehao
 	 */
 	public static Object wechatPay(String ip, String batchNum, String body, String money, String notify_url, String wechatPayType,String returnUrl,String openId) {
 		//money = "0.01";//测试默认值 TODO

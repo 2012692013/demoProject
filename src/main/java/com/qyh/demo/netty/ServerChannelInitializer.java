@@ -7,7 +7,7 @@ import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
 /**
- * @author q_y_h
+ * @author qiuyuehao
  * @date 2020/5/13 15:21
  * create by 2012692013@qq.com
  */

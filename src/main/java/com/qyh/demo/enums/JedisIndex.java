@@ -2,7 +2,7 @@ package com.qyh.demo.enums;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2019/1/17
  * Time:3:29 PM
  */

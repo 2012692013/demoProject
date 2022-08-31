@@ -5,7 +5,7 @@ import com.qyh.demo.entity.SysCode;
 
 /**
  * Created with IDEA
- * author:huxi
+ * author:qiuyuehao
  * Date:2019/1/5
  * Time:3:43 PM
  */

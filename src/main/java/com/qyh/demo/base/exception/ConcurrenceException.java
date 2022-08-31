@@ -2,7 +2,7 @@ package com.qyh.demo.base.exception;
 
 /**
  * 并发异常
- * @author yh
+ * @author qiuyuehao
  *
  */
 public class ConcurrenceException extends RuntimeException{

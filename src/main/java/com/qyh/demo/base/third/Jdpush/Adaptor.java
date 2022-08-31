@@ -3,7 +3,7 @@ package com.qyh.demo.base.third.Jdpush;
 
 /**
  * 适配器类
- * @author Administrator
+ * @author qiuyuehao
  *
  */
 public class Adaptor {
