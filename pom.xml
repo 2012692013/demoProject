@@ -40,7 +40,7 @@
 		<!-- 通用mapper版本号 -->
   		<mapper.version>4.0.0</mapper.version>
   		<!-- pagehelper版本号 -->
-	    <pagehelper.version>4.2.1</pagehelper.version>
+	    <pagehelper.version>5.3.1</pagehelper.version>
 	</properties>
 
 	<dependencies>
