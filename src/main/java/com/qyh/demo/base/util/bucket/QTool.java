@@ -1,5 +1,7 @@
 package com.qyh.demo.base.util.bucket;
 
+import com.qyh.demo.entity.FacilityInfo;
+
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -170,5 +172,37 @@ public class QTool {
             hashMap.put(columnName2PropertyName(key), o);
         }
         return hashMap;
+    }
+
+    /**
+     * INSERT INTO public.facility_info
+     * (id, devc_id, devc_name, rid, lng, lat, road_name, pile_no, sub_facility_type_no, gmt_create, facility_type_no, adcode, facility_angle, bearing, alt, pair, model_file_name, "bearing（偏转角）")
+     * VALUES(2, '01_151954333', '高速立杆', '', 113.303635, 23.486862, '', '', 101, 20200000847872, 1, 440114, '上行', NULL, 204.60173, '', 'zhihuidenggan.gltf', -249.46036);
+     * @param clazz
+     * @return
+     * @throws Exception
+     */
+    public static String getInsertHeader(Class<?> clazz) throws Exception {
+        Field[] declaredFields = clazz.getDeclaredFields();
+        StringBuilder sb = new StringBuilder();
+        String simpleName = clazz.getSimpleName();
+        String tableName = className2TableName(clazz);
+        sb.append("insert into ").append(tableName).append("(");
+        for (int i = 0; i < declaredFields.length; i++) {
+            Field field = declaredFields[i];
+            String name = field.getName();
+            sb.append(name);
+        }
+        sb.append(")");
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        try {
+            String insertHeader = getInsertHeader(FacilityInfo.class);
+            System.err.println(insertHeader);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

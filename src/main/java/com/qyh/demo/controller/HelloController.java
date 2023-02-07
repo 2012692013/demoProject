@@ -210,4 +210,8 @@ public class HelloController {
 		System.out.println("9000");
 		return "我是9000";
 	}
+
+	public static void main(String[] args) {
+
+	}
 }
